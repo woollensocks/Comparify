@@ -7,8 +7,8 @@
     <ProjectGuid>{D64B90F1-C7BE-4355-99B6-447BDCE16CA8}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ParsSnip</RootNamespace>
-    <AssemblyName>ParsSnip</AssemblyName>
+    <RootNamespace>Inspektor</RootNamespace>
+    <AssemblyName>Inspektor</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,6 +30,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>inspectorfy.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Renci.SshNet">
@@ -88,6 +91,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="inspectorfy.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

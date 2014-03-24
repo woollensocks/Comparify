@@ -17,6 +17,7 @@ namespace ParsSnip
     public partial class Form1 : Form
     {
         DataTable table1 = new DataTable("IPAddress");
+        
 
         public Form1()
         {
@@ -31,6 +32,9 @@ namespace ParsSnip
             checkedListBox2.BackColor = SystemColors.Control;
             //textBoxsearch.BackColor = SystemColors.Control;
             //textBoxsearch.Text = "Search";
+
+            table1.Columns.Add("name");
+            table1.Columns.Add("ip");
         
             
 
@@ -512,6 +516,7 @@ namespace ParsSnip
         {
             checkedListBox1.Enabled = true;
             checkedListBox2.Enabled = true;
+            checkedListBox1.Items.Clear();
             checkedListBox2.Items.Clear();
             checkedListBox1.BackColor = Color.White;
             checkedListBox2.BackColor = Color.White;
@@ -519,8 +524,8 @@ namespace ParsSnip
             
 
             //DataTable table1 = new DataTable("IPAddress");
-            table1.Columns.Add("name");
-            table1.Columns.Add("ip");
+            //table1.Columns.Add("name");
+            //table1.Columns.Add("ip");
 
             if (radio_api.Checked)
             {
