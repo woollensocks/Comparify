@@ -95,6 +95,7 @@
             this.txtExtractToFile.Name = "txtExtractToFile";
             this.txtExtractToFile.Size = new System.Drawing.Size(167, 20);
             this.txtExtractToFile.TabIndex = 14;
+            this.txtExtractToFile.Text = "output.txt";
             // 
             // txtOutput
             // 
@@ -375,7 +376,7 @@
             this.Controls.Add(this.txtOutput);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Mikrotik Inspector Gadget (1.0)";
+            this.Text = "Mikrotik Inspector Gadget (1.01)";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

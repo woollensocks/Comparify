@@ -30,8 +30,7 @@ namespace ParsSnip
             checkedListBox2.Enabled = false;
             checkedListBox1.BackColor = SystemColors.Control;
             checkedListBox2.BackColor = SystemColors.Control;
-            //textBoxsearch.BackColor = SystemColors.Control;
-            //textBoxsearch.Text = "Search";
+
 
             table1.Columns.Add("name");
             table1.Columns.Add("ip");
@@ -42,112 +41,6 @@ namespace ParsSnip
 
 
 
-
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-
-        //    var count = 0;
-        //    var filesInFolder = Directory.EnumerateFiles(txtFolder.Text);
-        //    txtOutput.Clear();
-        //    listBoxlogview.Items.Clear();
-
-        //    TextWriter tw = new StreamWriter(txtExtractToFile.Text);
-
-
-
-        //    var allLines = new List<string>();
-        //    var ssh = new List<string>();
-        //    var iplist = new List<string>();
-
-        //    foreach (var file in filesInFolder)
-        //    {
-        //        try
-        //        {
-        //            if (file.Contains(textBoxex.Text))
-        //            {
-        //                var listContents = File.ReadAllLines(file);
-        //                {
-        //                    foreach (var line in listContents)
-        //                    {
-        //                        //Checkedbox loop
-        //                        //string checkedItems = string.Empty;
-        //                        foreach (Object obj in checkedListBox2.CheckedItems)
-        //                        {
-
-
-        //                            //Start line by line
-
-
-        //                            if (line.Contains(checkedListBox2.Text))
-        //                            {
-        //                                count++;
-        //                                tw.WriteLine(line);
-        //                                listBoxlogview.Items.Add(line); //Add lines to Live view
-
-        //                                var x = line.Split('|');
-        //                                foreach (var ins in x)
-        //                                {
-        //                                    ssh.Add(ins);
-        //                                }
-
-
-        //                            }//End Line by line
-        //                        }//Checkedbox loop
-
-        //                    }
-        //                }
-        //                //txtOutput.AppendText(DateTime.Now + " | " + file + Environment.NewLine);
-        //                txtOutput.AppendText(file + Environment.NewLine);
-
-        //            }
-
-        //        }
-        //        catch (Exception ex)
-        //        {
-
-        //            txtOutput.AppendText("ERROR with file: " + file + ex + Environment.NewLine);
-        //        }
-
-        //    }
-
-
-        //    foreach (var in2 in ssh)
-        //    {
-        //        //textBoxlive.AppendText(in2+Environment.NewLine);
-
-
-        //        String input = in2;
-        //        Regex ip = new Regex(@"\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b");
-        //        MatchCollection result = ip.Matches(input);
-
-
-        //        var x = result[1];
-        //        iplist.Add(result[1].Value);
-
-
-        //    }
-
-        //    var ans = (from x in iplist select x).Distinct().ToList();
-
-        //    foreach (var line in ans)
-        //    {
-
-        //        if (chklive.Checked)
-        //        {
-
-        //            //checkbxiplist.Items.Add(line);
-        //        }
-
-
-        //    }
-
-        //    //foreach(var line in allLines)
-        //    //{
-        //    //    tw.WriteLine(line);
-        //    //}
-        //    tw.Close();
-        //    MessageBox.Show("Done. Found " + count + " lines with the specified text.");
-        //}
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
@@ -223,110 +116,7 @@ namespace ParsSnip
 
         }
 
-        //private void button3_Click(object sender, EventArgs e)
-        //{
-        //    checkedListBox2.Items.Clear();
-        //    try
-        //    {
-        //        using (var client = new SshClient(txbsshserver.Text, txbsshuser.Text, txbsshpassword.Text))
-        //        {
-        //            client.Connect();
-        //            //sshconnect.Text = client.IsConnected.ToString();
-        //            //checkedListBox2.ClearSelected();
 
-                   
-        //               //SSH Command in here
-        //               var command = client.RunCommand("ip firewall address-list print");
-
-        //               var result = command.Result;
-        //               //result = result.Substring(0, result.Length - 1);    //  Remove \n character returned by command
-
-        //            string value = command.Result;
-        //            client.Disconnect();
-        //            //
-        //            // Split the string on line breaks.
-        //            // ... The return value from Split is a string array.
-        //            //
-        //            string[] lines = Regex.Split(value, "\r\n");
-
-        //            foreach (string line in lines)
-        //            {
-                        
-        //               // textBox2.AppendText(line +Environment.NewLine);
-        //            }
-
-        //            //Apply regex to output from SSH
-        //            var arr = Regex.Matches(result, @"\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b")
-        //                    .Cast<Match>()
-        //                    .Select(m => m.Value)
-        //                    .ToArray();
-                       
-        //            //Add IP to listbox
-        //            foreach (var address in arr)
-        //            {
-        //                checkedListBox2.Items.Add(address);
-        //            }
-
-                    
-
-        //        }
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("You're an idiot " + Environment.NewLine + Environment.NewLine + ex.Message);
-        //    }
-        //}
-
-       
-
-        //private void button4_Click(object sender, EventArgs e)
-        //{
-
-        //    //Usin API Method
-
-        //    checkedListBox2.Items.Clear();
-
-        //    MK mikrotik = new MK(txbsshserver.Text);
-        //    if (!mikrotik.Login(txbsshuser.Text, txbsshpassword.Text))
-        //    {
-        //        MessageBox.Show("Unable To Connect");
-
-        //        //textBox2.AppendText("Could not log in");
-        //        mikrotik.Close();
-        //        return;
-        //    }
-        //    //mikrotik.Send("/system/identity/getall");
-        //    mikrotik.Send("/ip/firewall/address-list/getall");
-        //    //mikrotik.Send("?detail");
-        //    mikrotik.Send(".tag=|", true);
-                      
-
-
-        //    foreach (string h in mikrotik.Read())
-        //    {
-        //        if (h.IndexOf("list") != -1)
-        //        {
-        //            //Get The IP List
-        //            var iplist = h.Substring(h.IndexOf("list")+5, h.IndexOf("=address")-18);
-        //            //Apply regex to get the IP
-        //            var arr = Regex.Matches(h, @"\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b").Cast<Match>().Select(m => m.Value).ToArray();
-
-
-        //            foreach (var address in arr)
-        //            {
-        //                //lstsshoutput.Items.Add(iplist + " - " + address + Environment.NewLine);
-        //                checkedListBox2.Items.Add(address,true);
-        //                //comboBox1.Items.Add(iplist);
-        //            }
-
-
-        //        }
-                
-
-                
-        //    }
-        //}
 
         private void checkedListBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -371,8 +161,7 @@ namespace ParsSnip
                 txtOutput.Enabled = true;
                 richTextBox1.Enabled = true;
                 progressBar1.Value = 0;
-                //toolStripProgressBar1.Value = 0;
-                //progform.ShowDialog();
+
 
 
                 var filesInFolder = Directory.EnumerateFiles(txtFolder.Text);
@@ -383,6 +172,8 @@ namespace ParsSnip
 
                 txtOutput.Clear();
                 richTextBox1.Clear();
+                
+                TextWriter tw = new StreamWriter(txtExtractToFile.Text);
 
                 //if (chksave.Checked)
                 //{
@@ -412,12 +203,12 @@ namespace ParsSnip
                                     {
                                         if (line.Contains(tx_customsearch.Text))
                                         {
-                                            //if (chksave.Checked)
-                                            //{
-                                            //    tw.WriteLine(line);
-                                            //}
-                                
                                             richTextBox1.AppendText(file + " : " + line + Environment.NewLine);
+                                            if (chksave.Checked)
+                                            {
+                                                tw.WriteLine(line);
+                                            }                                
+                                            
                                         }
                                     }
                                     else
@@ -426,9 +217,13 @@ namespace ParsSnip
                                         {
                                             if (line.Contains(ItemChecked.ToString()))
                                             {
-                                                //tw.WriteLine(line);
-
                                                 richTextBox1.AppendText(ItemChecked.ToString() + ": from : " + file + " : " + line + Environment.NewLine);
+                                                if (chksave.Checked)
+                                                {
+                                                    tw.WriteLine(line);
+                                                }
+
+                                                
                                             }
                                         }
 
@@ -437,6 +232,8 @@ namespace ParsSnip
                                 }
                             }
                         }
+
+                        
                     }
                     catch (Exception ex)
                     {
@@ -445,11 +242,13 @@ namespace ParsSnip
 
                 }
 
-      
 
+                tw.Close();
 
                 MessageBox.Show("Complete, Scanned " + filesInFolder.Count() + " Files");
             }
+
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -653,19 +452,6 @@ namespace ParsSnip
             }
 
 
-            //checkedListBox1.DataSource = set; // where data is the datatable. datatable filled up with //data fetched from database.
-            //checkedListBox1.ValueMember = "ip";
-            //checkedListBox1.DisplayMember = "name";
-
-            //checkedListBox3.DataSource = (from s in set.Tables select "ip").Distinct().ToList();
-
-
-
-
-            //checkedListBox3.DataSource = table1;
-            //checkedListBox3.DisplayMember = "ip";
-            //checkedListBox3.ValueMember = "name";
-
 
         }//End Mikrotik Button
 
@@ -716,21 +502,7 @@ namespace ParsSnip
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //int index = 0;
-            //string temp = richTextBox1.Text;
-            //richTextBox1.Text = "";
-            //richTextBox1.Text = temp;
 
-            //var red = "404";
-
-            //while (index < richTextBox1.Text.LastIndexOf(red))
-            //{
-            //    richTextBox1.Find(textBoxsearch.Text, index, richTextBox1.TextLength, RichTextBoxFinds.None);
-            //    richTextBox1.SelectionColor = Color.White;
-            //    richTextBox1.SelectionBackColor = Color.Tomato;
-            //    index = richTextBox1.Text.IndexOf(textBoxsearch.Text, index) + 1;
-
-            //}
         }
 
         private void txbsshpassword_TextChanged(object sender, EventArgs e)
